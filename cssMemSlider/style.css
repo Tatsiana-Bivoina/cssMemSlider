@@ -1,12 +1,12 @@
 body {
-  background-color: cadetblue;
+  background-color: #000;
+  margin: 0;
 } 
 
 .mem-slider {
-  height: 100vh;
-  width: 100%;
-  padding: 0px 10%;
-  box-sizing: border-box;
+  height: 90vh;
+  width: 90vw;
+  margin: 5vh 5vw;
 }
 
 .slider {
@@ -18,18 +18,51 @@ body {
 
 .slider-container {
   display: flex;
-  height: 80%;
-  width: 9150px;
+  height: 75%;
+  width: calc(90vw * 6);
+  transition: .5s;
 }
 
 .slide {
-  width: calc(100% / 6);
+  width: 90vw;
   height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: darkgray;
-  border-radius: 80px;
+  border-radius: 2rem;
+}
+
+.slide > img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.slider-navigation {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  height: 5%;
+}
+
+.btn-prev, 
+.btn-next {
+  width: 40px;
+  height: 40px;
+  margin: 0 30px;
+}
+
+.btn-next > svg,
+.btn-prev > svg {
+  fill: #2f4f4f;
+}
+
+.btn-next:hover > svg,
+.btn-prev:hover > svg {
+  cursor: pointer;
+  fill: #fff;
 }
 
 .content-block {
@@ -38,37 +71,49 @@ body {
 }
 
 .slide-text-block {
-  width: 80%;
+  width: 70%;
 }
 
 .slide-text {
   font-family: cursive;
-  font-size: 30px;
+  font-size: 1.8rem;
   width: 90%;
   margin-top: 0;
   color: #2f4f4f;
 }
 
 .slider-pagination {
-  width: 20%;
+  width: 30%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .slider-bullet {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: #00008b;
+  width: 40px;
+  height: 100%;
+  margin-left: 15px;
+  cursor: pointer;
 }
 
-.slider-bullet:hover {
+.slider-bullet:hover > .bullet {
   cursor: pointer;
   background-color: #fff;
 }
 
-.slider-bullet.active {
-  border: 6px solid #00008b;
+.bullet {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #2f4f4f;
+}
+
+.slider-bullet.active > .bullet {
+  border: 6px solid #2f4f4f;
   background-color: transparent;
   box-sizing: border-box;
+}
+
+.slider-bullet.active:hover > .bullet {
+  border-color: #fff;
 }
