@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: #000;
   margin: 0;
@@ -37,6 +41,7 @@ body {
   object-fit: contain;
   height: 100%;
   width: 100%;
+  border-radius: 2rem;
 }
 
 .slider-navigation {
@@ -57,6 +62,8 @@ body {
 .btn-next > svg,
 .btn-prev > svg {
   fill: #2f4f4f;
+  width: 100%;
+  height: 100%;
 }
 
 .btn-next:hover > svg,
@@ -122,6 +129,42 @@ body {
   background-color: #40d4d4;
 }
 
-/* .bullet.mousedown {
-  background-color: #40d4d4;
-} */
+@media all and (max-width: 780px) {
+  html {
+    font-size: 10px;
+  }
+  .slider-container {
+    height: 60%;
+  }
+
+  .content-block {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    height: 30%;
+  }
+
+  .slider-navigation {
+    height: 10%;
+  }
+
+  .slide-text-block {
+    width: 100%;
+    height: 70%;
+  }
+
+  .slide-text {
+    width: 100%;
+  }
+
+  .slider-pagination {
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .slider-container {
+    height: 50%;
+  }
+}
