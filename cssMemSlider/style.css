@@ -49,9 +49,9 @@ body {
 
 .btn-prev, 
 .btn-next {
-  width: 40px;
-  height: 40px;
-  margin: 0 30px;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 3%;
 }
 
 .btn-next > svg,
@@ -89,9 +89,9 @@ body {
 }
 
 .slider-bullet {
-  width: 40px;
+  width: 2rem;
   height: 100%;
-  margin-left: 15px;
+  margin-left: 4%;
   cursor: pointer;
 }
 
@@ -101,19 +101,27 @@ body {
 }
 
 .bullet {
-  width: 35px;
-  height: 35px;
-  margin: 0 auto;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: #2f4f4f;
 }
 
 .slider-bullet.active > .bullet {
-  border: 6px solid #2f4f4f;
+  border: 0.4rem solid #2f4f4f;
   background-color: transparent;
   box-sizing: border-box;
 }
 
 .slider-bullet.active:hover > .bullet {
   border-color: #fff;
+  background-color: transparent;
 }
+
+.slider-bullet:hover > .bullet.mousedown {
+  background-color: #40d4d4;
+}
+
+/* .bullet.mousedown {
+  background-color: #40d4d4;
+} */
